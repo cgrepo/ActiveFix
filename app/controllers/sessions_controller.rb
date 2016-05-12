@@ -17,5 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
   	# only active when logout
+    reset_session
+    redirect_to login_path, notice: "You have been log out"
   end
 end

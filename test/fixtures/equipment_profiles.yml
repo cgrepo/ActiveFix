@@ -3,15 +3,17 @@
 one:
   no_inventary: MyString
   serial_number: MyString
+  service_years: 1
   manufacturer: MyString
   model: MyString
-  service_years: 1
   notes: MyText
+  Dependency_id: 
 
 two:
   no_inventary: MyString
   serial_number: MyString
+  service_years: 1
   manufacturer: MyString
   model: MyString
-  service_years: 1
   notes: MyText
+  Dependency_id: 

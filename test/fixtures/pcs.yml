@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hd: MyString
+  os: MyString
+  workgroup: MyString
+  lan_mac: MyString
+  wifi_mac: MyString
+  bluethooth: false
+  ip: MyString
+  mask: MyString
+  EquipmentProfile_id: 
+  Network_id: 
+
+two:
+  name: MyString
+  hd: MyString
+  os: MyString
+  workgroup: MyString
+  lan_mac: MyString
+  wifi_mac: MyString
+  bluethooth: false
+  ip: MyString
+  mask: MyString
+  EquipmentProfile_id: 
+  Network_id: 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  link_type: MyString
+  location: MyString
+  ip_range: MyString
+
+two:
+  link_type: MyString
+  location: MyString
+  ip_range: MyString

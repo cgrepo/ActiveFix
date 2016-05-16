@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  responsable: MyString
+  telephone: MyString
+  address: MyString
+  Dependency_id: 
+
+two:
+  location: MyString
+  responsable: MyString
+  telephone: MyString
+  address: MyString
+  Dependency_id: 

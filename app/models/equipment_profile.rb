@@ -1,7 +1,4 @@
 class EquipmentProfile < ActiveRecord::Base
-	has_one :pc
-	has_one :pow
-	has_one :printer
-	has_one :screen
-	
+  belongs_to :Dependency
+  has_many :PC
 end

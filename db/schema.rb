@@ -11,17 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516160626) do
+ActiveRecord::Schema.define(version: 20160516173645) do
+
+  create_table "dependencies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dependency_profiles", force: :cascade do |t|
+    t.string   "location"
+    t.string   "responsable"
+    t.string   "telephone"
+    t.string   "address"
+    t.integer  "Dependency_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "dependency_profiles", ["Dependency_id"], name: "index_dependency_profiles_on_Dependency_id"
 
   create_table "equipment_profiles", force: :cascade do |t|
     t.string   "no_inventary"
     t.string   "serial_number"
+    t.integer  "service_years"
     t.string   "manufacturer"
     t.string   "model"
-    t.integer  "service_years"
     t.text     "notes"
+    t.integer  "Dependency_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  add_index "equipment_profiles", ["Dependency_id"], name: "index_equipment_profiles_on_Dependency_id"
+
+  create_table "networks", force: :cascade do |t|
+    t.string   "link_type"
+    t.string   "location"
+    t.string   "ip_range"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

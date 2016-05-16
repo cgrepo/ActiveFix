@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516173645) do
+ActiveRecord::Schema.define(version: 20160516175438) do
+
+  create_table "consumables", force: :cascade do |t|
+    t.string   "type"
+    t.string   "model"
+    t.integer  "Copier_id"
+    t.integer  "Printer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "consumables", ["Copier_id"], name: "index_consumables_on_Copier_id"
+  add_index "consumables", ["Printer_id"], name: "index_consumables_on_Printer_id"
+
+  create_table "copiers", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "EquipmentProfile_id"
+    t.integer  "Network_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "copiers", ["EquipmentProfile_id"], name: "index_copiers_on_EquipmentProfile_id"
+  add_index "copiers", ["Network_id"], name: "index_copiers_on_Network_id"
 
   create_table "dependencies", force: :cascade do |t|
     t.string   "name"
@@ -53,6 +76,68 @@ ActiveRecord::Schema.define(version: 20160516173645) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "pcs", force: :cascade do |t|
+    t.string   "name"
+    t.string   "hd"
+    t.string   "os"
+    t.string   "workgroup"
+    t.string   "lan_mac"
+    t.string   "wifi_mac"
+    t.boolean  "bluethooth"
+    t.string   "ip"
+    t.string   "mask"
+    t.integer  "EquipmentProfile_id"
+    t.integer  "Network_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "pcs", ["EquipmentProfile_id"], name: "index_pcs_on_EquipmentProfile_id"
+  add_index "pcs", ["Network_id"], name: "index_pcs_on_Network_id"
+
+  create_table "pows", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "EquipmentProfile_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "pows", ["EquipmentProfile_id"], name: "index_pows_on_EquipmentProfile_id"
+
+  create_table "printers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "type"
+    t.integer  "EquipmentProfile_id"
+    t.integer  "Network_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "printers", ["EquipmentProfile_id"], name: "index_printers_on_EquipmentProfile_id"
+  add_index "printers", ["Network_id"], name: "index_printers_on_Network_id"
+
+  create_table "screens", force: :cascade do |t|
+    t.integer  "inches"
+    t.integer  "EquipmentProfile_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "screens", ["EquipmentProfile_id"], name: "index_screens_on_EquipmentProfile_id"
+
+  create_table "statistics", force: :cascade do |t|
+    t.string   "month"
+    t.integer  "sheet"
+    t.integer  "consumable"
+    t.integer  "Copier_id"
+    t.integer  "Printer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "statistics", ["Copier_id"], name: "index_statistics_on_Copier_id"
+  add_index "statistics", ["Printer_id"], name: "index_statistics_on_Printer_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

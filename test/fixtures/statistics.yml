@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  sheet: 1
+  consumable: 1
+  Copier_id: 
+  Printer_id: 
+
+two:
+  month: MyString
+  sheet: 1
+  consumable: 1
+  Copier_id: 
+  Printer_id: 

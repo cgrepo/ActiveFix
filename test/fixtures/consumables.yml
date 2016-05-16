@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  model: MyString
+  Copier_id: 
+  Printer_id: 
+
+two:
+  type: 
+  model: MyString
+  Copier_id: 
+  Printer_id: 

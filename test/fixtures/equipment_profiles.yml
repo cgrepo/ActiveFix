@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_inventary: MyString
+  serial_number: MyString
+  manufacturer: MyString
+  model: MyString
+  service_years: 1
+  notes: MyText
+
+two:
+  no_inventary: MyString
+  serial_number: MyString
+  manufacturer: MyString
+  model: MyString
+  service_years: 1
+  notes: MyText

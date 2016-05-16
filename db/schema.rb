@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516175438) do
+ActiveRecord::Schema.define(version: 20160516183529) do
 
   create_table "consumables", force: :cascade do |t|
     t.string   "type"
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20160516175438) do
     t.integer  "Network_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.string   "users"
   end
 
   add_index "pcs", ["EquipmentProfile_id"], name: "index_pcs_on_EquipmentProfile_id"

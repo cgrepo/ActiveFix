@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516183529) do
+ActiveRecord::Schema.define(version: 20160517165203) do
 
   create_table "consumables", force: :cascade do |t|
-    t.string   "type"
+    t.string   "genus"
     t.string   "model"
     t.integer  "Copier_id"
     t.integer  "Printer_id"
@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 20160516183529) do
 
   create_table "dependencies", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "dependency_profiles", force: :cascade do |t|
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20160516183529) do
     t.integer  "Dependency_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "delegation"
   end
 
   add_index "dependency_profiles", ["Dependency_id"], name: "index_dependency_profiles_on_Dependency_id"
@@ -84,7 +85,7 @@ ActiveRecord::Schema.define(version: 20160516183529) do
     t.string   "workgroup"
     t.string   "lan_mac"
     t.string   "wifi_mac"
-    t.boolean  "bluethooth"
+    t.boolean  "bluetooth"
     t.string   "ip"
     t.string   "mask"
     t.integer  "EquipmentProfile_id"
@@ -108,7 +109,7 @@ ActiveRecord::Schema.define(version: 20160516183529) do
 
   create_table "printers", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "genus"
     t.integer  "EquipmentProfile_id"
     t.integer  "Network_id"
     t.datetime "created_at",          null: false

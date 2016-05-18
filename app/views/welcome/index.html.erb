@@ -1,35 +1,16 @@
 
-			<h1>PCS</h1>
-			<table>
-  			<thead>
-	    		<tr>
-	      	<th>id</th>
-	      	<th>name</th>
-	      	<th>hd</th>
-	      	<th>os</th>
-	      	<th>workgroup</th>
-	      	<th>lan_mac</th>
-	      	<th>wifi_mac</th>
-	      	<th>bluethooth</th>
-	      	<th>ip</th>
-	      	<th>mask</th>
-	      	<th colspan="3"></th>
-    		</tr>
-  			</thead>
-			  <tbody>
-			    <% @pcs.each do |pc| %>
-			      <tr>		        
-			        <td><%= pc.name %></td>
-			        <td><%= pc.hd %></td>
-			        <td><%= pc.os %></td>
-			        <td><%= pc.workgroup %></td>
-			        <td><%= pc.lan_mac %></td>
-			        <td><%= pc.wifi_mac %></td>
-			        <td><%= pc.bluetooth %></td>
-			        <td><%= pc.ip %></td>
-			        <td><%= pc.mask %></td>
-			      </tr>
-			    <% end %>
-			  </tbody>
-			</table>
-  		<p id="notice"><%= notice %></p>
+<h1>MENU</h1>
+<nav class="be-red white">
+	<ul class="no-list row center-xs">
+		<li class="col-md">
+			<%= link_to 'COMPUTADORAS', computers_index_path %>
+		</li>
+		<li class="col-md">
+			DEPENDENCIAS
+		</li>
+		<li class="col-md">
+    	REDES
+		</li>
+	</ul>
+</nav>
+<p id="notice"><%= notice %></p>

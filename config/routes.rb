@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'computers/index'
+
+  get 'computers/show'
+
+  get 'computers/new'
+
+  get 'computers/edit'
+
+  get 'computers/create'
+
+  get 'computers/update'
+
+  get 'computers/destroy'
+
   #get 'welcome/index'
   #get 'sessions/new'
   #get 'sessions/create'

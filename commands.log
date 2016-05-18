@@ -1,0 +1,92 @@
+rake db:migrate
+rake db:rollback
+rake db:migrate
+rails c
+rails g migration ChangeTypeToGenusConsumable
+rake db:migrate
+rails c
+s
+rails g migration AddDelegationToDependencyProfile delegation
+rails c
+s
+rake db:seed
+rails c
+s
+rails c
+s
+rails c
+doskey /HISTORY
+doskey /HISTORY > commands.log
+git status
+git list
+git log
+rails g model Screen inches:integer EquipmentProfile:references
+rails g model Pow type EquipmentProfile:references
+rake db:migrate
+rails db
+git status
+git commit -anm screen_pow_copier_printer_statistic_consumable_models
+git status
+git add  .
+git log
+git status
+git commit -nm screen_pow_copier_printer_statistic_consumable_models_2
+git status
+rake db:migrate
+rails g migration AddUsersToPC users
+rake db:migrate
+rails c
+rails db
+rails c
+rails s
+s
+rake db:seed
+rake db:seed --trace
+rake db:seed
+rails g migration ChangeTypeToDescriptionDependency
+rake db:migrate
+rails db
+rails g migration ChangeTypeToGenusConsumable
+rails g migration ChangeTypeToGenusPrinter
+f:
+cd Coursera
+cd ruby
+cd ActiveFix
+rails c
+rails db
+rake db:migrate
+rails db
+rails db:migrate
+s
+rails db:migrate
+rake db:migrate
+rake db:seed
+s
+rake db:seed
+rails db
+rake db:seed
+git status
+git add .
+git status
+git log
+git commit -nm seeded db working with examples now
+git commit -nm "seeded db working with examples now"
+git status
+rails g scaffold pcs
+rails g controller computers index show new edit create update destroy
+doskey
+doskey /?
+doskey /HISTORY
+doskey /HISTORY >> commands.log
+f:
+cd Coursera
+cd ruby
+cd ActiveFix
+rake db:seed
+rails g migration ChangeBluethoothToBluetoothPc
+rake db:migrate
+rails s
+s
+rails db
+doskey /history
+doskey /history >> commands.log

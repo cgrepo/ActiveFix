@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517165203) do
+ActiveRecord::Schema.define(version: 20160518173811) do
 
   create_table "consumables", force: :cascade do |t|
     t.string   "genus"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20160517165203) do
     t.integer  "Dependency_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.boolean  "alive"
+    t.string   "becouse"
   end
 
   add_index "equipment_profiles", ["Dependency_id"], name: "index_equipment_profiles_on_Dependency_id"

@@ -1,0 +1,37 @@
+<h1>Computers#index</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre PC</th>
+      <th>H.D.</th>
+      <th>S.O.</th>
+      <th>WORKGROUP</th>
+      <th>MAC LAN</th>
+      <th>MAC WIFI</th>
+      <th>BLUETOOTH</th>
+      <th>IP / MASK</th>
+      <th>USUARIOS</th>
+      <th>CREADO</th>
+    </tr>
+	</thead>
+	<tbody>
+		<% @computers.each do |pc| %>
+ 			<tr>
+  			<td><%= pc.id %></td>
+    		<td><%= pc.name %></td>
+    		<td><%= pc.hd %></td>
+    		<td><%= pc.os %></td>
+    		<td><%= pc.workgroup %></td>
+    		<td><%= pc.lan_mac %></td>
+    		<td><%= pc.wifi_mac %></td>
+    		<td><%= pc.bluetooth %></td>
+    		<td><%= pc.ip %>/<%= pc.mask %></td>
+    		<td><%= pc.users %></td>
+    		<td><%= pc.created_at %></td>
+  		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to "NUEVO", computers_new_path %>

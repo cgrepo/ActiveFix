@@ -1,4 +1,4 @@
-<h1>Computers#index</h1>
+<h1>COMPUTADORAS</h1>
 <table>
   <thead>
     <tr>
@@ -12,7 +12,6 @@
       <th>BLUETOOTH</th>
       <th>IP / MASK</th>
       <th>USUARIOS</th>
-      <th>CREADO</th>
     </tr>
 	</thead>
 	<tbody>
@@ -28,10 +27,9 @@
     		<td><%= pc.bluetooth %></td>
     		<td><%= pc.ip %>/<%= pc.mask %></td>
     		<td><%= pc.users %></td>
-    		<td><%= pc.created_at %></td>
   		</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<%= link_to "NUEVO", computers_new_path %>
+<%#= link_to "NUEVO", computers_new_path %>

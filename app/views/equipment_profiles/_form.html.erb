@@ -1,0 +1,32 @@
+ 
+ <%= form_for(@equipment_profile) do |f| %>
+ <div class="field">
+ 		<%= f.label	:"# DE INVENTARIO" %><br>
+ 		<%= f.text_field :no_inventary %>
+ </div>
+ <div class="field">
+ 		<%= f.label	:SERIAL %><br>
+ 		<%= f.text_field :serial_number %>
+ </div>
+ <div class="field">
+ 		<%= f.label	:AÑOS %><br>
+ 		<%= f.text_field :service_years %>
+ </div>
+ <div class="field">
+ 		<%= f.label	:MARCA %><br>
+ 		<%= f.text_field :manufacturer %>
+ </div>
+ <div class="field">
+ 		<%= f.label	:MODELO %><br>
+ 		<%= f.text_field :model %>
+ </div>
+ <div class="field">
+ 		<%= f.label	:MODELO %><br>
+ 		<%= f.text_field :model %>
+ </div> 
+ <div class="field">
+ 		<%= f.label	:OBSERVACIONES %><br>
+ 		<%= f.text_area :notes %>
+ </div> 
+ <%= f.submit "CREAR PERFIL EQUIPO", class: "btn-submit" %>
+ <% end %>

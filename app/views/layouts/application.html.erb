@@ -7,12 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if logged_in? %>
-  <div style='float: right;'>
-    Logged in as <%= current_user.username %> |
-    <%= link_to "Logout", logout_path, method: :delete %> 
-  </div>
-<% end %>
+	<div>
+		<table>
+			<tr>
+				<td>
+						<%= image_tag("logodire.png", size: "140") %>
+				</td>
+				<td>
+				<%= image_tag("direccion.png") %>
+				</td>
+			</tr>
+			<tr>
+				<td style='float: right;'>
+					<% if logged_in? %>
+  					<div >
+    					Logged in as <%= current_user.username %> |
+    					<%= link_to "Logout", logout_path, method: :delete %> 
+  					</div>
+					<% end %>
+				</td>
+			</tr>
+		</table>
+	</div>
+
 <%= yield %>
 
 </body>

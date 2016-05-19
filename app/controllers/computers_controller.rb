@@ -8,9 +8,8 @@ class ComputersController < ApplicationController
   end
 
   def new
-    @equipmentProfile = EquipmentProfile.new
+    @pc = Pc.new
   end
-
   def edit
   end
 

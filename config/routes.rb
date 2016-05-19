@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
   get 'computers/index'
-
-  get 'computers/show'
-
-  get 'computers/new'
-
-  get 'computers/edit'
-
-  get 'computers/create'
-
-  get 'computers/update'
-
-  get 'computers/destroy'
-
+  #get 'computers/show'
+  #get 'computers/new'
+  #get 'computers/edit'
+  #get 'computers/create'
+  #get 'computers/update'
+  #get 'computers/destroy'
+  #get 'equipment_profiles/new'
+  resources :equipment_profiles, only: [:new]
+  resources :computers, only: [:new]
   #get 'welcome/index'
   #get 'sessions/new'
   #get 'sessions/create'

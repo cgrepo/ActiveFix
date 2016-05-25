@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<%#= debug @equipment_profile %>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="1">No Inventario</th>
+      <th colspan="2">No serie</th>
+      <th colspan="2">Años de Servicio</th>
+      <th colspan="2">Marca</th>
+      <th colspan="4">Modelo</th>
+      <th colspan="4">Notas</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+      <tr>
+        <td colspan="2"></td>
+        <td colspan="1"><%= @equipment_profile.no_inventary %></td>
+        <td colspan="2"><%= @equipment_profile.serial_number %></td>
+        <td colspan="2"><%= @equipment_profile.service_years %></td>
+        <td colspan="2"><%= @equipment_profile.manufacturer %></td>
+        <td colspan="4"><%= @equipment_profile.model %></td>
+        <td colspan="4"><%= @equipment_profile.notes %></td>
+        <td><%#= link_to 'Show', equipment_profile_path %></td>
+        <td><%#= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
+        <td><%#= link_to 'Destroy', todo_list, method: :delete %></td>
+      </tr>
+
+  </tbody>
+</table>
+<%= link_to 'LISTADO', equipment_profiles_path %>

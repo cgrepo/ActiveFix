@@ -1,0 +1,33 @@
+<h1>Listado Perfile de Equipos</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="1">No Inventario</th>
+      <th colspan="2">No serie</th>
+      <th colspan="2">Años de Servicio</th>
+      <th colspan="2">Marca</th>
+      <th colspan="4">Modelo</th>
+      <th colspan="4">Notas</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipment_profiles.each do |ep| %>
+      <tr>
+        <td colspan="2"></td>
+        <td colspan="1"><%= ep.no_inventary %></td>
+        <td colspan="2"><%= ep.serial_number %></td>
+        <td colspan="2"><%= ep.service_years %></td>
+        <td colspan="2"><%= ep.manufacturer %></td>
+        <td colspan="4"><%= ep.model %></td>
+        <td colspan="4"><%= ep.notes %></td>
+        <td><%= link_to 'Show', ep %></td>
+        <td><%#= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
+        <td><%= link_to 'Borrar', ep, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'NUEVO', new_equipment_profile_path %>

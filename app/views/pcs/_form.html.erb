@@ -1,0 +1,41 @@
+<%= @pc %>
+<%= @equipment_profile %>
+ <%= form_for @pc do |f| %>
+	 <div class="field">
+	 		<%= f.label	:"NOMBRE EQUIPO" %><br>
+	 		<%= f.text_field :name %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:"H.D.D." %><br>
+	 		<%= f.text_field :hd %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:"SISTEMA OPERATIVO" %><br>
+	 		<%= f.text_field :os %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:"GRUPO DE TRABAJO" %><br>
+	 		<%= f.text_field :workgroup %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:"LAN MAC" %><br>
+	 		<%= f.text_field :lan_mac %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:"WIFI MAC" %><br>
+	 		<%= f.text_field :wifi_mac %>
+	 </div> 
+	 <div class="field">
+	 		<%= f.label	:BLUETOOTH %><br>
+	 		<%= f.text_area :bluetooth %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:IP %><br>
+	 		<%= f.text_area :ip %>
+	 </div>
+	 <div class="field">
+	 		<%= f.label	:MASK %><br>
+	 		<%= f.text_area :mask %>
+	 </div>
+ 	<%= f.submit "CREAR", class: "btn-submit" %>
+ <% end %>

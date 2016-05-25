@@ -1,21 +1,17 @@
 Rails.application.routes.draw do
-  get 'computers/index'
+  #get 'computers/index'
   #get 'computers/show'
   #get 'computers/new'
   #get 'computers/edit'
   #get 'computers/create'
   #get 'computers/update'
   #get 'computers/destroy'
-  #get 'equipment_profiles/new'
-  resources :equipment_profiles, only: [:new]
-  resources :computers, only: [:new]
-  #get 'welcome/index'
-  #get 'sessions/new'
-  #get 'sessions/create'
-  #get 'sessions/destroy'
-  get "goin" => "welcome#index"
+  
+  resources :equipment_profiles, only: [:new, :index, :create, :show, :destroy]
+  resources :pcs, only: [:index, :new, :create]
   root to: 'welcome#index'
   resources :sessions, only: [:new, :create, :destroy]
   get "/login" => "sessions#new", as: "login"
   delete "/logout" => "sessions#destroy", as: "logout"
+
 end

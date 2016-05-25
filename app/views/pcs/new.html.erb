@@ -1,0 +1,19 @@
+<h3>PERFILES DISPONILES</h3>
+
+<% if  @equipment_profiles.is_a?(Array) %>
+  <thead>
+  		<th colspan="3">NO INVENTARIO</th>
+  		<th colspan="4">NO SERIAL</th>
+
+  	</thead>
+  	<tbody>
+  		<% @equipment_profiles.each do |ep| %>
+  			<td colspan="5"><%= ep[0] %></br></td>
+  			<td colspan="3"><%= ep[1] %></br></td>
+  			</tr>
+  		<% end %>
+  	</tbody>
+  </table>
+<% end %>
+  <%= render template: 'equipment_profiles/epform' %>
+	<%= render 'form' %>
